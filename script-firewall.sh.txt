@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Inicia servicio firewall"
+sudo service firewalld start
+
+echo "Edita Resolv.conf"
+cat <<TEST> /etc/resolv.conf
+nameserver 192.168.100.2
+TEST

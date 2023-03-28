@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Inicia servicio DNS"
+sudo service named start
+
+echo "Edita Resolv.conf"
+cat <<TEST> /etc/resolv.conf
+nameserver 192.168.100.4
+TEST
+
